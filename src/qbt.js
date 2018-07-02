@@ -302,7 +302,7 @@ function addTorrent(queue, torrent, options, callback) {
   queue.push({
     method: "POST",
     url: "/command/upload",
-    formData: options
+    form: options
   }, function (error) {
     if (callback) {
       callback(error);
@@ -333,7 +333,7 @@ function addTorrentUrl(queue, url, options, callback) {
   queue.push({
     method: "POST",
     url: "/command/download",
-    formData: options
+    form: options
   }, function (error) {
     if (callback) {
       callback(error);
